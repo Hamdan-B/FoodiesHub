@@ -1,0 +1,50 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Helper function to check if user is admin
+    // IMPORTANT: Update the email below to match your VITE_ADMIN_EMAIL from .env
+    function isAdmin() {
+      return request.auth != null && 
+             request.auth.token.email == 'admin@foodieshub.com';
+    }
+
+    // Store logos
+    match /store-logos/{fileName} {
+      // Admin has full access
+      allow read, write: if isAdmin();
+      
+      // Anyone can read store logos
+      allow read: if true;
+      
+      // Sellers can upload logos for their store
+      allow write: if request.auth != null && 
+                    fileName.matches('.*_' + request.auth.uid + '_.*');
+    }
+
+    // Food images
+    match /food-images/{fileName} {
+      // Admin has full access
+      allow read, write: if isAdmin();
+      
+      // Anyone can read food images
+      allow read: if true;
+      
+      // Sellers can upload food images
+      allow write: if request.auth != null;
+    }
+
+    // Rider profile images
+    match /rider-profiles/{fileName} {
+      // Admin has full access
+      allow read, write: if isAdmin();
+      
+      // Anyone can read rider profile images
+      allow read: if true;
+      
+      // Riders can upload their own profile images
+      allow write: if request.auth != null && 
+                    fileName.matches('.*_' + request.auth.uid + '_.*');
+    }
+  }
+}
+
