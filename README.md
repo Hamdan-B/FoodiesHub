@@ -169,21 +169,14 @@ VITE_SUPABASE_BUCKET_NAME=supabasebucketname
    - `riders`
    - `reviews`
 
-#### 4.4 Set Up Storage
-1. Go to Storage
-2. Create the following folders (they will be created automatically):
-   - `store-logos/`
-   - `food-images/`
-   - `rider-profiles/`
-
-#### 4.5 Deploy Security Rules
+#### 4.4 Deploy Security Rules
 1. Go to Firestore Database → Rules
 2. Copy and paste the contents of `firestore.rules`
 3. Go to Storage → Rules
 4. Copy and paste the contents of `storage.rules`
 5. **Important**: Update the admin email in `firestore.rules` and `storage.rules` to match your `VITE_ADMIN_EMAIL`
 
-#### 4.6 Create Firestore Indexes
+#### 4.5 Create Firestore Indexes
 Create the following composite indexes in Firestore:
 1. `stores`: `city` (for city-based filtering)
 2. `foodItems`: `storeId`, `category`
@@ -191,6 +184,12 @@ Create the following composite indexes in Firestore:
 4. `orders`: `storeId`, `orderStatus`
 5. `orders`: `riderId`, `orderStatus`
 6. `reviews`: `targetId`, `type`
+
+#### 4.6 Create Supabase Project
+1. Go to [Supabase console](https://supabase.com)
+2. Create a new project
+3. Create a new bucket
+4. Edit bucket policies
 
 ### 5. Google Gemini API Setup
 1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
