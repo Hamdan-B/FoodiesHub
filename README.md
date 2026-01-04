@@ -204,7 +204,7 @@ npm run dev
 
 The application will be available at `http://localhost:5173`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 FoodiesHub/
@@ -243,7 +243,7 @@ FoodiesHub/
 └── README.md             # This file
 ```
 
-## 🔒 Security Rules
+## Security Rules
 
 ### Firestore Rules
 - Admin email has full access
@@ -259,7 +259,7 @@ FoodiesHub/
 
 **Important**: Update the admin email in both rule files to match your `.env` configuration.
 
-## 🎯 Key Features Explained
+## Key Features Explained
 
 ### Group Size Selection
 Buyers can select:
@@ -291,7 +291,7 @@ This selection is used for AI recommendations and stored with orders.
 - Shown to buyer in order details
 - Used for delivery confirmation
 
-## 🧪 Testing
+## Testing
 
 ### Test Accounts
 1. Create a buyer account
@@ -305,7 +305,7 @@ This selection is used for AI recommendations and stored with orders.
 3. **Rider**: Go online → Accept orders → Deliver orders
 4. **Admin**: Approve sellers/riders → View all data
 
-## 📝 Notes
+## Notes
 
 - **No user avatars** for buyers/users (only riders have profile images)
 - **One store per seller** - enforced in code and Firestore rules
@@ -313,7 +313,7 @@ This selection is used for AI recommendations and stored with orders.
 - **Real-time updates** using Firestore listeners
 - **Clean, simple code** - appropriate for FYP
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Firebase Connection Issues
 - Verify all environment variables are set correctly
@@ -335,11 +335,11 @@ This selection is used for AI recommendations and stored with orders.
 - Verify Storage security rules
 - Ensure admin email matches in rules and `.env`
 
-## 📄 License
+## License
 
 This project is created for educational purposes as a Final Year Project.
 
-## 👨‍💻 Development
+## Development
 
 ### Build for Production
 ```bash
@@ -355,11 +355,3 @@ npm run preview
 ```bash
 npm run lint
 ```
-
-## 🤝 Contributing
-
-This is a Final Year Project. For questions or issues, please contact the project maintainer.
-
----
-
-**Built with ❤️ for FoodiesHub**
