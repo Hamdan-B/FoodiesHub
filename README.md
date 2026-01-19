@@ -1,6 +1,6 @@
 # FoodiesHub - Food Delivery Web Application
 
-A comprehensive food delivery platform built with React and Firebase, similar to Foodpanda. This is a Final Year Project (FYP) featuring role-based access control, AI-powered recommendations, and real-time order tracking.
+A comprehensive food delivery platform built with React and Firebase, similar to Foodpanda. This project features role-based access control, AI-powered recommendations, and real-time order tracking.
 
 ## Tech Stack
 
@@ -333,10 +333,6 @@ This selection is used for AI recommendations and stored with orders.
 - Check Firestore security rules
 - Verify Storage security rules
 - Ensure admin email matches in rules and `.env`
-
-## License
-
-This project is created for educational purposes as a Final Year Project.
 
 ## Development
 
